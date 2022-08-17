@@ -1,0 +1,2 @@
+# Allow members of group nginx-chromium-kiosk to start, restart and stop the service without being asked for a password
+%nginx-chromium-kiosk ALL=(ALL:ALL) NOPASSWD: /usr/bin/systemctl start nginx-chromium-kiosk, /usr/bin/systemctl restart nginx-chromium-kiosk, /usr/bin/systemctl stop nginx-chromium-kiosk

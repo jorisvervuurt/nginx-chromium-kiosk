@@ -1,0 +1,11 @@
+server {
+    listen       8080;
+    server_name  _;
+
+    location / {
+        root   /var/www/nginx-chromium-kiosk;
+        index  index.html;
+
+        try_files $uri $uri/ /index.html;
+    }
+}
