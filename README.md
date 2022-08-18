@@ -87,7 +87,7 @@ $ sudo systemctl disable bluetooth
     ```
     [Service]
     ExecStart=
-    ExecStart=-/sbin/agetty --autologin nginx-chromium-kiosk --noclear %I $TERM
+    ExecStart=-/sbin/agetty --autologin nginx-chromium-kiosk %I $TERM
     ```
 
 5. Clone this repository and navigate to it:
