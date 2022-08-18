@@ -12,7 +12,7 @@ The instructions below allow you to setup a kiosk using a Raspberry Pi and a Pim
     - Choose a username and set a password
     - Configure Wifi if you're not using Ethernet
 
-*Note:* if you see `[USERNAME]` (the username as configured in Raspberry Pi Image) and/or `[IP_ADDRESS]` (the IP address of the Pi) placeholders in the commands below, replace them with the actual values.
+*Note:* if you see `[USERNAME]` (the username as configured in Raspberry Pi Imager) and/or `[IP_ADDRESS]` (the IP address of the Pi) placeholders in the commands below, replace them with the actual values.
 
 ## Step one: configure the kernel
 1. Connect the display to the Pi, insert the SD card and boot the Pi<br>
@@ -78,7 +78,7 @@ $ sudo systemctl disable bluetooth
 
 3. Create a dedicated user/group and add yourself to that group:
    ```
-   $ sudo useradd nginx-chromium-kiosk -U -m
+   $ sudo useradd nginx-chromium-kiosk -r -U -m
    $ sudo usermod -a -G nginx-chromium-kiosk [USERNAME]
    $ newgrp nginx-chromium-kiosk
    ```
@@ -112,7 +112,7 @@ $ sudo systemctl disable bluetooth
     2. Enable the site:
         ```
         $ sudo rm -f /etc/nginx/sites-enabled/default
-        $ cp -r nginx/www/* /var/www/nginx-chromium-kiosk
+        $ cp -R nginx/www/* /var/www/nginx-chromium-kiosk
         $ sudo cp nginx/nginx-chromium-kiosk /etc/nginx/sites-available/nginx-chromium-kiosk
         $ sudo ln -s /etc/nginx/sites-available/nginx-chromium-kiosk /etc/nginx/sites-enabled/nginx-chromium-kiosk
         ```
@@ -136,7 +136,7 @@ $ sudo systemctl disable bluetooth
 9. Cleanup
     ```
     $ cd ..
-    $ rm -rf nginx-chromium-kiosk
+    $ rm -R -f nginx-chromium-kiosk
     ``` 
 
 ## Final steps
