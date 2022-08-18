@@ -105,7 +105,7 @@ $ sudo systemctl disable bluetooth
     2. Create the directory where files will be served from:
         ```
         $ sudo mkdir /var/www/nginx-chromium-kiosk
-        $ sudo chown -R nginx-chromium-kiosk: /var/www/nginx-chromium-kiosk
+        $ sudo chown nginx-chromium-kiosk: /var/www/nginx-chromium-kiosk
         $ sudo chmod g+srwx /var/www/nginx-chromium-kiosk
         ```
 
