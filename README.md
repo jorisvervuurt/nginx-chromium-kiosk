@@ -119,7 +119,7 @@ $ sudo systemctl disable bluetooth
 
 7. Install the `systemd` service:
     ```
-    $ sudo cp systemd/nginx-chromium-kiosk.service /lib/systemd/system/nginx-chromium-kiosk.service
+    $ sudo cp systemd/nginx-chromium-kiosk.service /etc/systemd/system/nginx-chromium-kiosk.service
     $ sudo cp sudoers/nginx-chromium-kiosk /etc/sudoers.d/nginx-chromium-kiosk
     ```
 
