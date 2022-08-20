@@ -1,13 +1,13 @@
-# Turn off display power management system
+# Turn off the display power management system
 xset -dpms
 
 # Turn off screen blanking      
 xset s noblank
 
-# Turn off screen saver
+# Turn off the screen saver
 xset s off
 
-# Display background image
+# Display the background image
 xloadimage -quiet -display :0 -onroot -center /home/nginx-chromium-kiosk/.config/openbox/background.png
 
 # Start the service

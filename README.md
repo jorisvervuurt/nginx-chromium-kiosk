@@ -1,5 +1,5 @@
 # nginx-chromium-kiosk 
-The instructions below allow you to setup a kiosk using a Raspberry Pi and a Pimoroni HyperPixel XP 4.0 Square Touch display. The Pi will silently boot into the OS. A local NGINX server will then be started on port `8080`, serving files from the `/var/www/nginx-chromium-kiosk` directory. Once NGINX has started, Chromium is launched in kiosk mode.
+The instructions below allow you to setup a kiosk using a Raspberry Pi and a Pimoroni HyperPixel XP 4.0 Square Touch display (but the setup can be easily adapted to a different display). The Pi will silently boot into the OS. A local NGINX server will then be started on port `8080`, serving files from the `/var/www/nginx-chromium-kiosk` directory. Once NGINX has started, Chromium is launched in kiosk mode.
 
 **CAUTION:** it is assumed that these instructions are ***not*** used on an existing installation!
 
@@ -36,13 +36,13 @@ The instructions below allow you to setup a kiosk using a Raspberry Pi and a Pim
 5. Edit the `/boot/config.txt` file:
     1. Add the following at the end of the file:
         ```
-        # Disable splash screen
+        # Disable the splash screen
         disable_splash=1
 
-        # Set GPU memory to 128 MB
+        # Set the GPU memory to 128 MB
         gpu_mem=128
 
-        # Enable HyperPixel XP 4.0 Square Touch display
+        # Enable the Pimoroni HyperPixel XP 4.0 Square Touch display
         dtoverlay=vc4-kms-dpi-hyperpixel4sq
         ```
     2. Optionally, disable Bluetooth by adding the following at the end of the file:
