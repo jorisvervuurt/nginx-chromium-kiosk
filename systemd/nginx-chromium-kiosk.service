@@ -9,4 +9,4 @@ User=nginx-chromium-kiosk
 Group=nginx-chromium-kiosk
 Environment=DISPLAY=:0
 ExecStartPre=/usr/bin/rm -rf /home/nginx-chromium-kiosk/.config/chromium
-ExecStart=/usr/bin/chromium-browser --disable-gpu --kiosk --incognito --no-first-run --disable-infobars --noerrdialogs --disable-features=Translate --overscroll-history-navigation=0 --disable-features=TouchpadOverscrollHistoryNavigation --touch-events=enabled --disable-pinch --password-store=basic --disk-cache-dir=/dev/null --disk-cache-size=1 --simulate-outdated-no-au='Tue, 31 Dec 2099 23:59:59 GMT' --disable-component-update --app=http://localhost:8080
+ExecStart=/usr/bin/chromium-browser --disable-gpu --force-device-scale-factor=1.5 --kiosk --incognito --no-first-run --disable-infobars --noerrdialogs --disable-features=Translate --overscroll-history-navigation=0 --disable-features=TouchpadOverscrollHistoryNavigation --touch-events=enabled --disable-pinch --password-store=basic --disk-cache-dir=/dev/null --disk-cache-size=1 --simulate-outdated-no-au='Tue, 31 Dec 2099 23:59:59 GMT' --disable-component-update --app=http://localhost:8080
