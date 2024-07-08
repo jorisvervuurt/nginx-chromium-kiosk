@@ -1,6 +1,10 @@
 # nginx-chromium-kiosk 
 The instructions below allow you to setup a kiosk using a Raspberry Pi and a Pimoroni HyperPixel XP 4.0 Square Touch display (but the setup can be easily adapted to a different display). The Pi will silently boot into the OS. A local NGINX server will then be started on port `8080`, serving files from the `/var/www/nginx-chromium-kiosk` directory. Once NGINX has started, Chromium is launched in kiosk mode.
 
+# IMPORTANT NOTICE
+This repository has moved to [GitLab](https://gitlab.joris-vervuurt.com/miscellaneous/nginx-chromium-kiosk).
+The GitHub repository been archived and will no longer be maintained.
+
 **CAUTION:** it is assumed that these instructions are ***not*** used on an existing installation!
 
 ## Requirements
